@@ -1,0 +1,173 @@
+/* General container styling */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Page header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Card styling */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Orders Table */
+.orders-table, .order-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.orders-table th, .orders-table td,
+.order-details-table th, .order-details-table td {
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: left;
+}
+
+.orders-table th, .order-details-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
+}
+
+.orders-table tr:nth-child(even),
+.order-details-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.orders-table tr:hover,
+.order-details-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.orders-table td.actions {
+    text-align: center;
+}
+
+/* Action buttons container */
+.action-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Align buttons vertically */
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Alerts */
+.alert {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+}
+
+.empty-state p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.empty-state .btn {
+    margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        padding: 8px 6px;
+    }
+
+    .action-buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 5px;
+    }
+}

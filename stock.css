@@ -1,0 +1,241 @@
+/* Stock Page Styles */
+.page-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    gap: 18px;
+}
+.page-header h1 {
+    font-size: 2em;
+    color: #232b3e;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form-container {
+    margin-bottom: 32px;
+}
+.card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(79,140,255,0.07);
+    padding: 28px 32px;
+    margin-bottom: 24px;
+}
+.card h2 {
+    color: #232b3e;
+    font-size: 1.3em;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+.form-group label {
+    font-weight: 500;
+    color: #232b3e;
+    margin-bottom: 6px;
+    display: block;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dbeafe;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #f7f9fb;
+    margin-bottom: 2px;
+    transition: border 0.2s;
+}
+.form-group input:focus, .form-group select:focus {
+    border: 1.5px solid #4f8cff;
+    outline: none;
+}
+.form-actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+}
+.table-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(79,140,255,0.07);
+    padding: 28px 32px;
+}
+.table-card h2 {
+    margin-bottom: 18px;
+    color: #232b3e;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+th, td {
+    padding: 12px 10px;
+    text-align: left;
+}
+th {
+    background: #f0f4fa;
+    color: #232b3e;
+    font-weight: 600;
+    border-bottom: 2px solid #e3eafc;
+}
+tr:nth-child(even) {
+    background: #f7f9fb;
+}
+.actions {
+    gap: 8px;
+}
+.action-btn {
+    border: none;
+    background: none;
+    color: #4f8cff;
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+}
+.action-btn.delete-btn:hover {
+    background: #ffeaea;
+    color: #c0392b;
+}
+.empty-state {
+    text-align: center;
+    padding: 40px 0;
+}
+.empty-icon {
+    font-size: 3em;
+    color: #dbeafe;
+    margin-bottom: 12px;
+}
+
+/* Make contents fit the page */
+.main-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    min-width: 180px;
+    background: #232b3e;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 32px 40px;
+    box-sizing: border-box;
+}
+
+.card,
+.table-card {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* --- Tabs --- */
+.tabs {
+    margin-bottom: 32px;
+}
+.tab-list {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 18px;
+}
+.tab-list .tab {
+    background: #eaf6ff;
+    color: #232b3e;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    font-size: 1em;
+    transition: background 0.18s, color 0.18s;
+    border-bottom: 2px solid transparent;
+    outline: none;
+}
+.tab-list .tab.active {
+    background: #4f8cff;
+    color: #fff;
+    border-bottom: 2px solid #4f8cff;
+    z-index: 2;
+}
+.tab-list .tab:not(.active):hover {
+    background: #dbeafe;
+    color: #4f8cff;
+}
+.tab-content {
+    display: none;
+    animation: fadeIn 0.2s;
+}
+.tab-content.active {
+    display: block;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 900px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 0;
+    }
+    .sidebar a {
+        padding: 12px 10px;
+        font-size: 1em;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+    .sidebar a.active,
+    .sidebar a:hover {
+        border-left: none;
+        border-bottom: 3px solid #4f8cff;
+    }
+    .container {
+        align-items: stretch;
+        padding: 18px 4px;
+        max-width: 100%;
+    }
+    .table-card, .card {
+        padding: 16px 6px;
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .tab-list .tab {
+        padding: 10px 10px;
+        font-size: 0.98em;
+    }
+}

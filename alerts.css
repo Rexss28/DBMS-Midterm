@@ -1,0 +1,46 @@
+/* Alert & Flash Message Styles */
+.alert {
+    padding: 14px 20px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: opacity 0.5s;
+}
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.alert-error {
+    background: #ffeaea;
+    color: #c0392b;
+    border-left: 5px solid #e74c3c;
+}
+.alert-info {
+    background: #eaf6ff;
+    color: #4f8cff;
+    border-left: 5px solid #4f8cff;
+}
+.alert-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+.success-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23155724' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='16 12 12 8 8 12'%3E%3C/polyline%3E%3Cline x1='12' y1='16' x2='12' y2='8'%3E%3C/line%3E%3C/svg%3E");
+}
+.error-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23721c24' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
+}

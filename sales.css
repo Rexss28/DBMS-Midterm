@@ -1,0 +1,274 @@
+/* --- Modern Sales Page Styles --- */
+body {
+    background: #f4f7fb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.main-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f7fb;
+}
+
+/* 
+   REMOVE sidebar styles from this file!
+   The sidebar will now use the global styles from base.css for consistency.
+*/
+
+/* Do NOT redefine .sidebar or .sidebar a here! Use only in base.css */
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 40px 48px 40px 48px;
+    box-sizing: border-box;
+    background: #f4f7fb;
+    font-size: 1.08em;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #232b3e;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.stats-container {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+.stat-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 24px 32px;
+    flex: 1;
+    text-align: center;
+}
+.stat-card h3 {
+    color: #4f8cff;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+.stat-value {
+    font-size: 2em;
+    font-weight: 700;
+    color: #232b3e;
+    margin-bottom: 4px;
+}
+
+.sales-container {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+.sales-form, .sales-summary {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(79,140,255,0.07);
+    padding: 32px 36px;
+    flex: 1 1 350px;
+    min-width: 320px;
+}
+.sales-form h2, .sales-summary h2 {
+    color: #232b3e;
+    font-size: 1.25em;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+.form-row {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.form-row label {
+    font-weight: 500;
+    color: #232b3e;
+}
+.form-row input, .form-row select {
+    padding: 10px 12px;
+    border: 1px solid #dbeafe;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #f7f9fb;
+    transition: border 0.2s;
+}
+.form-row input:focus, .form-row select:focus {
+    border: 1.5px solid #4f8cff;
+    outline: none;
+}
+.form-row button[type="submit"] {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.18s;
+}
+.form-row button[type="submit"]:hover {
+    background: #376fc7;
+}
+.form-row button#resetFilters {
+    background: #eaeaea;
+    color: #232b3e;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background 0.18s;
+}
+.form-row button#resetFilters:hover {
+    background: #dbeafe;
+}
+
+.sales-summary .summary-section {
+    background: #f7f9fb;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 18px;
+}
+.sales-summary .form-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#productDetails {
+    margin-bottom: 12px;
+}
+.product-detail-box {
+    background: #eaf6ff;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+}
+
+.filters {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 18px 24px;
+    margin-bottom: 18px;
+}
+.filters form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: flex-end;
+}
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 160px;
+}
+.filter-group label {
+    font-weight: 500;
+    color: #232b3e;
+}
+.filter-group input, .filter-group select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #dbeafe;
+    background: #f7f9fb;
+    font-size: 1em;
+}
+
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+.sales-table th, .sales-table td {
+    padding: 14px 12px;
+    text-align: left;
+}
+.sales-table th {
+    background: #f0f4fa;
+    color: #232b3e;
+    font-weight: 600;
+    border-bottom: 2px solid #e3eafc;
+}
+.sales-table tr:nth-child(even) {
+    background: #f7f9fb;
+}
+
+.pagination {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+.pagination a {
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: #f0f4fa;
+    color: #232b3e;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.18s, color 0.18s;
+}
+.pagination a.active,
+.pagination a:hover {
+    background: #4f8cff;
+    color: #fff;
+}
+
+.alert {
+    margin-bottom: 18px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 1.08em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.alert-success {
+    background: #eafaf1;
+    color: #218c5b;
+}
+.alert-danger {
+    background: #ffeaea;
+    color: #c0392b;
+}
+
+@media (max-width: 1100px) {
+    .container {
+        padding: 18px 4px;
+    }
+    .sales-container {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .stats-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+@media (max-width: 900px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    /* Sidebar styles are inherited from base.css */
+    .container {
+        padding: 18px 4px;
+        font-size: 1em;
+    }
+}

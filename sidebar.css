@@ -1,0 +1,66 @@
+/* Sidebar Styles */
+.main-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f7f9fb;
+}
+
+.sidebar {
+    width: 230px;
+    background: linear-gradient(180deg, #232b3e 0%, #1a1f2b 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.04);
+    min-height: 100vh;
+}
+
+.sidebar a {
+    color: #fff;
+    padding: 18px 28px;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-left: 4px solid transparent;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background: #1a2230;
+    border-left: 4px solid #4f8cff;
+    color: #4f8cff;
+}
+
+.sidebar i {
+    min-width: 22px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+@media (max-width: 900px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        flex-direction: row;
+        width: 100%;
+        min-height: unset;
+        padding: 0;
+        box-shadow: none;
+    }
+    .sidebar a {
+        flex: 1;
+        justify-content: center;
+        border-left: none;
+        border-bottom: 4px solid transparent;
+    }
+    .sidebar a.active,
+    .sidebar a:hover {
+        border-left: none;
+        border-bottom: 4px solid #4f8cff;
+    }
+}

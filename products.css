@@ -1,0 +1,207 @@
+/* Products Page Styles */
+.products-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    gap: 18px;
+}
+.products-header h1 {
+    font-size: 2em;
+    color: #232b3e;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.products-header .subtitle {
+    color: #7f8c8d;
+    font-size: 1.08em;
+    margin-top: 2px;
+}
+.product-form-card {
+    max-width: 600px;
+    margin: 0 auto 32px auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(79,140,255,0.07);
+    padding: 32px 36px;
+}
+.product-form-card h2 {
+    color: #232b3e;
+    font-size: 1.3em;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+.form-group label {
+    font-weight: 500;
+    color: #232b3e;
+    margin-bottom: 6px;
+    display: block;
+}
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dbeafe;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #f7f9fb;
+    margin-bottom: 2px;
+    transition: border 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus {
+    border: 1.5px solid #4f8cff;
+    outline: none;
+}
+.form-actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+}
+.data-controls {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: flex-end;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.search-container input, .search-container select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #dbeafe;
+    background: #f7f9fb;
+    font-size: 1em;
+}
+.table-card {
+    margin-top: 18px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(79,140,255,0.07);
+    padding: 28px 32px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.table-card h2 {
+    margin-bottom: 18px;
+    color: #232b3e;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+#productsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+#productsTable th, #productsTable td {
+    padding: 12px 10px;
+    text-align: left;
+}
+#productsTable th {
+    background: #f0f4fa;
+    color: #232b3e;
+    font-weight: 600;
+    border-bottom: 2px solid #e3eafc;
+}
+#productsTable tr:nth-child(even) {
+    background: #f7f9fb;
+}
+.category-badge {
+    background: #eaf6ff;
+    color: #4f8cff;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.97em;
+    font-weight: 500;
+}
+.actions {
+    display: flex;
+    gap: 8px;
+}
+.action-btn {
+    border: none;
+    background: none;
+    color: #4f8cff;
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+}
+.action-btn.edit-btn:hover {
+    background: #eaf6ff;
+    color: #376fc7;
+}
+.action-btn.delete-btn:hover {
+    background: #ffeaea;
+    color: #c0392b;
+}
+.action-btn.view-btn:hover {
+    background: #eafaf1;
+    color: #218c5b;
+}
+.empty-state {
+    text-align: center;
+    padding: 40px 0;
+}
+.empty-icon {
+    font-size: 3em;
+    color: #dbeafe;
+    margin-bottom: 12px;
+}
+.showing-text {
+    color: #888;
+    font-size: 0.98em;
+}
+
+/* Make contents fit the page like dashboard */
+.container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 32px 24px;
+    box-sizing: border-box;
+}
+
+.card,
+.table-card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 18px 4px;
+    }
+    .table-card, .product-form-card {
+        padding: 16px 6px;
+    }
+    .products-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
